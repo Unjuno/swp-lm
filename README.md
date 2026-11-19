@@ -2,7 +2,7 @@
 
 **Status: experimental / not production-ready.**
 
-このリポジトリは、ユーザー提供の1M/8M教師モデルを利用して実施したSWP-LM第11〜16次実験の**コードと検証結果**を整理したものです。固定フーリエ出力、PQコードブック、通常の低ランク出力、辞書更新、自然さ評価を比較します。
+このリポジトリは、ユーザー提供の1M/8M教師モデルを利用して実施したSWP-LM第11〜16次実験を対象とする研究用コードの公開基盤です。第11〜16次の実験アーカイブ全体はまだGitHubに反映しておらず、実験記録の一部は手元のGit bundleに保存されています。固定フーリエ出力、PQコードブック、通常の低ランク出力、辞書更新、自然さ評価を比較します。
 
 ## 研究上の結論（暫定）
 
@@ -19,7 +19,7 @@
 | `src/swp_lm/core.py` | PQ出力辞書／GRU学生の最小実装（第13次実験由来） |
 | `tests/` | 合成データによる推論・確率正規化・勾配テスト |
 | `examples/` | 教師・チェックポイント不要の最小動作例 |
-| `experiments/v11`〜`v16` | 版ごとの研究コードとREADME（元アーカイブから選別） |
+| `experiments/README.md` | V11〜V16の実験アーカイブの取扱い・未反映状況 |
 | `docs/EXPERIMENT_STATUS_JA.md` | 比較結果と解釈上の制約 |
 | `scripts/restore_experiment_archives.py` | 元ZIPをローカルの `external/` に再展開する補助ツール |
 | `external/` | 重みを含む元の版別環境（Gitには含めない） |
@@ -40,7 +40,7 @@ python examples/synthetic_forward.py
 python scripts/restore_experiment_archives.py --input-dir /path/to/your/archives
 ```
 
-**注意:** `experiments/v11`〜`v16` は版ごとの研究スクリプトを保管したものです。`external/` の重み、元の相対ディレクトリ構造がない場合、すべての実験スクリプトを直接実行できるわけではありません。各版の README を参照してください。
+**注意:** GitHubに登録済みの最小コアは重みなしで動作します。V11〜V16の詳細な研究スクリプトや生成結果は未反映です。元のZIPはGitに含まれず、再現には教師重みや元アーカイブが必要な場合があります。
 
 ## 公開・再配布
 

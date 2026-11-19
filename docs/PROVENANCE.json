@@ -1,0 +1,14 @@
+{
+  "source_archives": {
+    "v11": "SWP_LM_v11_controlled_experiment.zip",
+    "v12": "SWP_LM_v12_scaling_results.zip",
+    "v13": "SWP_LM_v13_fresh_data_scaling.zip",
+    "v14": "SWP_LM_v14_dictionary_regularization_experiment.zip",
+    "v15": "SWP_LM_v15_frequency_gated_experiment.zip",
+    "v16": "SWP_LM_v16_naturalness_evaluation.zip"
+  },
+  "no_teacher_weights_included": true,
+  "no_model_checkpoints_included": true,
+  "github_sources_status": "Core package, tests and docs published; detailed v11-v16 scripts and data not yet imported",
+  "notes": "Source archive contents are available in the user's local git bundle and original experiment ZIPs; this GitHub tree is a partial publication."
+}
