@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swp-lm-research"
+version = "0.1.0"
+description = "Research reproduction archive: PQ-compressed output, spectral baselines, and naturalness evaluations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "numpy>=1.24", "regex>=2023.0"]
+
+[project.optional-dependencies]
+research = ["scipy>=1.10"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
